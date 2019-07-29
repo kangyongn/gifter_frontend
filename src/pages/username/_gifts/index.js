@@ -6,7 +6,7 @@ class Gifts extends React.Component {
 
 
   // getSenderName = (id) => {
-  //   fetch(`http://localhost:3000/api/v1/users/${id}`)
+  //   fetch(`https://gifter-backend.herokuapp.com/api/v1/users/${id}`)
   //   .then(resp => resp.json())
   //   .then(user => {
   //     return user.first_name
@@ -21,7 +21,7 @@ class Gifts extends React.Component {
 
   handleClick = (gift) => {
     if(!gift.opened) {
-      fetch(`http://localhost:3000/api/v1/gifts/${gift.id}`, {
+      fetch(`https://gifter-backend.herokuapp.com/api/v1/gifts/${gift.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

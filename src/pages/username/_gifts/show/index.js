@@ -33,7 +33,7 @@ class ShowPage extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://localhost:3000/api/v1/gifts/${this.props.id}`)
+    fetch(`https://gifter-backend.herokuapp.com/api/v1/gifts/${this.props.id}`)
     .then(resp => resp.json())
     .then(gift => {
       this.setState({
@@ -73,7 +73,7 @@ class ShowPage extends React.Component {
         </ModalComp>
 
         <ModalComp show={this.state.imgOpen} title={'Their Picture'} close={this.closeShow}>
-          <img src={`http://localhost:3000/${this.state.image}`} />
+          <img src={`https://gifter-backend.herokuapp.com/${this.state.image}`} />
         </ModalComp>
       </div>
     )

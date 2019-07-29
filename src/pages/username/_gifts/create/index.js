@@ -32,7 +32,7 @@ class CreatePage extends React.Component {
       data.append(key, this.state.gift[key])
     })
 
-    fetch("http://localhost:3000/api/v1/gifts", {
+    fetch("https://gifter-backend.herokuapp.com/api/v1/gifts", {
       method: 'POST',
       body: data
     })
@@ -108,7 +108,7 @@ class CreatePage extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/api/v1/users')
+    fetch('https://gifter-backend.herokuapp.com/api/v1/users')
       .then(res => res.json())
       .then(allUsers => {
         const users = allUsers.filter(user => user.id != this.props.userObj.user.id)
